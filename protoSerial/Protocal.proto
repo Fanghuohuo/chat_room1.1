@@ -1,0 +1,24 @@
+syntax = 'proto3';
+
+package chat.information;
+
+message PBindName {
+    bytes name = 1;
+}
+
+message PChat {
+    bytes information = 1;
+}
+
+message PRoomInformation {
+    int64 time = 1;
+    bytes name = 2;
+    bytes information = 3;
+}
+
+message PServerErrorMessage {
+    enum ErrorMessage {
+        BodyTooLong = 0;
+    }
+    ErrorMessage mes = 1; 
+} 
